@@ -1,9 +1,12 @@
-﻿namespace ChatAppUI;
+﻿using ChatAppUI.Views;
 
-public partial class AppShell : Shell
+namespace ChatAppUI;
+
+public partial class AppShell
 {
     public AppShell()
     {
         InitializeComponent();
+        Routing.RegisterRoute(nameof(DetailPage), typeof(DetailPage));
     }
 }

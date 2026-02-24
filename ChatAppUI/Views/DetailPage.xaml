@@ -2,8 +2,16 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ChatAppUI.ViewModel"
+             x:DataType="viewmodel:DetailPageViewModel"
              x:Class="ChatAppUI.Views.DetailPage">
     <ContentPage.Content>
-        
+        <VerticalStackLayout>
+            <Label
+                HeightRequest="30"
+                BackgroundColor="Aqua"
+                TextColor="Black"
+                Text="{Binding Message.Sender.Name}"></Label>
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -23,10 +23,13 @@ public static class MauiProgram
             });
         //Service
         builder.Services.AddSingleton<MessageService>();
+        builder.Services.AddSingleton<INavigationService, ShellNavigationService>();
         //ViewModel
         builder.Services.AddSingleton<HomePageViewModel>();
+        builder.Services.AddTransient<DetailPageViewModel>();
         //UI
         builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddTransient<DetailPage>();
         
 
 #if DEBUG

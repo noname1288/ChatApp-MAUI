@@ -3,10 +3,10 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewmodels="clr-namespace:ChatAppUI.ViewModel"
+    xmlns:viewmodel="clr-namespace:ChatAppUI.ViewModel"
     xmlns:templates="clr-namespace:ChatAppUI.Views.Template"
     xmlns:model="clr-namespace:ChatAppUI.Models"
-    x:DataType="viewmodels:HomePageViewModel"
+    x:DataType="viewmodel:HomePageViewModel"
     x:Class="ChatAppUI.Views.HomePage">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -16,11 +16,13 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="WidthRequest" Value="160" />
+                <Setter Property="HeightRequest" Value="70" />
                 <Setter Property="Margin" Value="36, 48, 0, 0" />
             </Style>
 
             <Style x:Key="SuggestedContainerStyle" TargetType="Grid">
-                <Setter Property="Margin" Value="36, 24, 0, 24" />
+                <Setter Property="Margin" Value="36, 12, 0, 24" />
+                <Setter Property="VerticalOptions" Value="Center" />
             </Style>
 
             <Style x:Key="SearchContainerStyle" TargetType="Grid">
@@ -55,7 +57,6 @@
                 RowDefinitions="Auto, *">
                 <HorizontalStackLayout>
                     <Label
-                        Grid.Row="0"
                         Text="Chat with your friends"
                         Style="{StaticResource TitleTextStyle}" />
                 </HorizontalStackLayout>
@@ -97,16 +98,23 @@
                 </BoxView>
                 <CollectionView
                     ItemsSource="{Binding Messages}"
+                    SelectionMode="Single"
                     Style="{StaticResource RecentChatCollectionStyle}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Message">
-                            <templates:RecentChatItemTemplate />
+                            <Grid>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}},
+                                                Path=GoToChatDetailCommand}" 
+                                        CommandParameter="{Binding .}"/>
+                                </Grid.GestureRecognizers>
+                                <templates:RecentChatItemTemplate />
+                            </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Grid>
-
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
