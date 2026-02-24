@@ -9,6 +9,8 @@ build_property.CsWinRTComponent =
 build_property.CsWinRTAotOptimizerEnabled = 
 build_property.CsWinRTAotWarningLevel = 
 build_property.TargetFramework = net9.0-android
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
@@ -17,44 +19,56 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChatAppUI
-build_property.ProjectDir = /Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/
+build_property.ProjectDir = D:\MAUI\ChatApp-MAUI1\ChatAppUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/App.xaml]
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/AppShell.xaml]
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
-[/Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/Resources/Styles/Colors.xaml]
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[/Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/Resources/Styles/Styles.xaml]
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[/Users/quanglm1/Downloads/maui test/ChatAppUI/ChatAppUI/Views/Template/RecentChatItemTemplate.xaml]
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/Views/DetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.Views.DetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetailPage.xaml
+
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
+
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/Views/Template/RecentChatItemTemplate.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.Views.Template.RecentChatItemTemplate.xaml
-build_metadata.AdditionalFiles.TargetPath = Views/Template/RecentChatItemTemplate.xaml
-build_metadata.AdditionalFiles.RelativePath = Views/Template/RecentChatItemTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Template\RecentChatItemTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Template\RecentChatItemTemplate.xaml
+
+[D:/MAUI/ChatApp-MAUI1/ChatAppUI/Views/Template/SuggestedItemTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChatAppUI.Views.Template.SuggestedItemTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Template\SuggestedItemTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Template\SuggestedItemTemplate.xaml

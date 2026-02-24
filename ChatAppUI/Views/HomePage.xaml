@@ -3,6 +3,10 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:ChatAppUI.ViewModel"
+    xmlns:templates="clr-namespace:ChatAppUI.Views.Template"
+    xmlns:model="clr-namespace:ChatAppUI.Models"
+    x:DataType="viewmodels:HomePageViewModel"
     x:Class="ChatAppUI.Views.HomePage">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -30,6 +34,15 @@
             <Style x:Key="SearchIconStyle" TargetType="Image">
                 <Setter Property="Margin" Value="6"></Setter>
             </Style>
+
+            <Style x:Key="RecentChatBoxViewStyle" TargetType="BoxView">
+                <Setter Property="CornerRadius" Value="24,24,0,0"></Setter>
+                <Setter Property="Color" Value="White"></Setter>
+            </Style>
+
+            <Style x:Key="RecentChatCollectionStyle" TargetType="CollectionView">
+                <Setter Property="Margin" Value="12,12,12,0"></Setter>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -38,17 +51,16 @@
             RowDefinitions="Auto, *">
             <!-- Header -->
             <Grid
-                BackgroundColor="Yellow"
                 Grid.Row="0"
                 RowDefinitions="Auto, *">
-                <Label
-                    Grid.Row="0"
-                    BackgroundColor="Green"
-                    Text="Chat with your friends"
-                    Style="{StaticResource TitleTextStyle}" />
+                <HorizontalStackLayout>
+                    <Label
+                        Grid.Row="0"
+                        Text="Chat with your friends"
+                        Style="{StaticResource TitleTextStyle}" />
+                </HorizontalStackLayout>
                 <Grid
                     Grid.Row="1"
-                    BackgroundColor="Red"
                     ColumnDefinitions="Auto, *"
                     Style="{StaticResource SuggestedContainerStyle}">
                     <!-- Search Button -->
@@ -67,12 +79,34 @@
                         Orientation="Horizontal">
                         <StackLayout
                             Orientation="Horizontal"
-                            BackgroundColor="Aqua">
-
+                            BindableLayout.ItemsSource="{Binding Users}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="model:User">
+                                    <templates:SuggestedItemTemplate></templates:SuggestedItemTemplate>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
                         </StackLayout>
                     </ScrollView>
                 </Grid>
             </Grid>
+            <!-- Recent Chats-->
+            <Grid
+                Grid.Row="1">
+                <BoxView
+                    Style="{StaticResource RecentChatBoxViewStyle}">
+                </BoxView>
+                <CollectionView
+                    ItemsSource="{Binding Messages}"
+                    Style="{StaticResource RecentChatCollectionStyle}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Message">
+                            <templates:RecentChatItemTemplate />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
